@@ -5,9 +5,9 @@ permalink: docs/hooks-faq.html
 prev: hooks-reference.html
 ---
 
-*Hooks* are a new addition in React 16.8. They let you use state and other React features without writing a class.
+Les *Hooks* sont une des nouveautés de React 16.8. Ils vous permettent d'utiliser les states, et d'autres fonctionnalités propres à React, sans écrire de classes.
 
-This page answers some of the frequently asked questions about [Hooks](/docs/hooks-overview.html).
+Cette page répond à quelques unes des questions les plus fréquentes à propos des [Hooks](/docs/hooks-overview.html).
 
 <!--
   if you ever need to regenerate this, this snippet in the devtools console might help:
@@ -18,25 +18,25 @@ This page answers some of the frequently asked questions about [Hooks](/docs/hoo
   ).join('\n')
 -->
 
-* **[Adoption Strategy](#adoption-strategy)**
-  * [Which versions of React include Hooks?](#which-versions-of-react-include-hooks)
-  * [Do I need to rewrite all my class components?](#do-i-need-to-rewrite-all-my-class-components)
-  * [What can I do with Hooks that I couldn't with classes?](#what-can-i-do-with-hooks-that-i-couldnt-with-classes)
-  * [How much of my React knowledge stays relevant?](#how-much-of-my-react-knowledge-stays-relevant)
-  * [Should I use Hooks, classes, or a mix of both?](#should-i-use-hooks-classes-or-a-mix-of-both)
-  * [Do Hooks cover all use cases for classes?](#do-hooks-cover-all-use-cases-for-classes)
-  * [Do Hooks replace render props and higher-order components?](#do-hooks-replace-render-props-and-higher-order-components)
-  * [What do Hooks mean for popular APIs like Redux connect() and React Router?](#what-do-hooks-mean-for-popular-apis-like-redux-connect-and-react-router)
-  * [Do Hooks work with static typing?](#do-hooks-work-with-static-typing)
-  * [How to test components that use Hooks?](#how-to-test-components-that-use-hooks)
-  * [What exactly do the lint rules enforce?](#what-exactly-do-the-lint-rules-enforce)
-* **[From Classes to Hooks](#from-classes-to-hooks)**
-  * [How do lifecycle methods correspond to Hooks?](#how-do-lifecycle-methods-correspond-to-hooks)
-  * [Is there something like instance variables?](#is-there-something-like-instance-variables)
-  * [Should I use one or many state variables?](#should-i-use-one-or-many-state-variables)
-  * [Can I run an effect only on updates?](#can-i-run-an-effect-only-on-updates)
-  * [How to get the previous props or state?](#how-to-get-the-previous-props-or-state)
-  * [How do I implement getDerivedStateFromProps?](#how-do-i-implement-getderivedstatefromprops)
+* **[Stragégie d'adoption](#adoption-strategy)**
+  * [Quelles versions de React includent les Hooks ?](#which-versions-of-react-include-hooks)
+  * [Est-ce que je dois réecrire tous mes components construits sur classes ?](#do-i-need-to-rewrite-all-my-class-components)
+  * [Que puis-je faire avec les Hooks que je ne pouvais pas faire avec les classes ?](#what-can-i-do-with-hooks-that-i-couldnt-with-classes)
+  * [À quelle point ma connaissance en React reste-t-elle pertinente ?](#how-much-of-my-react-knowledge-stays-relevant)
+  * [Devrais-je utiliser les Hooks, les classes, ou un mix des deux ?](#should-i-use-hooks-classes-or-a-mix-of-both)
+  * [Les Hooks couvrent-ils tous les use-cases des classes ?](#do-hooks-cover-all-use-cases-for-classes)
+  * [Les Hooks remplacent-ils les render props and les higher-order components ?](#do-hooks-replace-render-props-and-higher-order-components)
+  * [Quel est l'impact des Hooks sur les APIs populaires comme Redux connect() et React Router ?](#what-do-hooks-mean-for-popular-apis-like-redux-connect-and-react-router)
+  * [Les Hooks fonctionnent-ils avec le typing statique ?](#do-hooks-work-with-static-typing)
+  * [Comment tester des components qui utilisent les Hooks ?](#how-to-test-components-that-use-hooks)
+  * [Qu'enforcent les regles de linting, exactement ?](#what-exactly-do-the-lint-rules-enforce)
+* **[Des Classes aux Hooks](#from-classes-to-hooks)**
+  * [Quelles sont les correspondances entre lifecycle methods et Hooks?](#how-do-lifecycle-methods-correspond-to-hooks)
+  * [Y a-t-il quelque chose comme des variables d'instance ?](#is-there-something-like-instance-variables)
+  * [Dois-je utiliser une ou plusieurs variables de state ?](#should-i-use-one-or-many-state-variables)
+  * [Puis-je run un effect seulement sur les updates ?](#can-i-run-an-effect-only-on-updates)
+  * [Comment accéder aux props ou states précedents ?](#how-to-get-the-previous-props-or-state)
+  * [Comment puis-je implementer getDerivedStateFromProps ?](#how-do-i-implement-getderivedstatefromprops)
   * [Is there something like forceUpdate?](#is-there-something-like-forceupdate)
   * [Can I make a ref to a function component?](#can-i-make-a-ref-to-a-function-component)
   * [What does const [thing, setThing] = useState() mean?](#what-does-const-thing-setthing--usestate-mean)
